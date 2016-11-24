@@ -1,0 +1,7 @@
+# use random ports
+server:
+  port: 9411
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: "${discovery.server:http://localhost:9201/eureka/}"

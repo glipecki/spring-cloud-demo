@@ -1,0 +1,5 @@
+server:
+  port: 9105
+turbine:
+  stream:
+    port: 9106

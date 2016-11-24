@@ -1,0 +1,11 @@
+zuul:
+ routes:
+   srv01:
+     path: /srv01/**
+     url: http://localhost:9101/
+   srv02:
+     path: /srv02/**
+     url: http://localhost:9102/
+   srv03:
+     path: /srv03/**
+     url: http://localhost:9103/

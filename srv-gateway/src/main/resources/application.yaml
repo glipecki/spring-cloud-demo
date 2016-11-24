@@ -1,0 +1,22 @@
+# read about zuul timeouts:
+# http://stackoverflow.com/questions/28904247/zuul-timing-out-in-long-ish-requests
+# http://stackoverflow.com/questions/29965817/why-is-zuul-forcing-a-semaphore-isolation-to-execute-its-hystrix-commands
+server:
+  port: 9100
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: "${discovery.server:http://localhost:9201/eureka/}"
+  instance:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:1}
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
