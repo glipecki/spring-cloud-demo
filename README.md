@@ -36,6 +36,36 @@ Spring Cloud based microservices demo
   - cloud task
   - cloud aws 
 
+## Teoria
+
+### Api Gateway
+- uprasza część kliencką systemu, chowa detale implementacyjne
+- zapewnia load balancing
+- wspiera service discovery i wykrywanie topologii w runtime
+- możliwość zaawansowanego routingu
+- możliwość filtrowania żądań, przykładowo:
+  - uwierzytelnianie i autoryzacja na poziomie gateway
+  - monitorowanie brzegu systemu
+  - debugowanie
+  
+### Service Discovery
+- rozproszona topologia/architektura/deployment aplikacji
+- minimalizajca konfiguracji systemu
+- skalowanie usług
+- wdrożenia green/blue
+- monitorowanie stanu systemu, wykrywanie awarii
+- możliwość ręcznego odpięcia działającej instancji usługi (maintenance)
+
+### Circut Breaker
+- szybkie odcięcią dla wadliwych usług, fail fast
+- ciche porażki dla opcjonalnych wartości, fail silent
+- fallback przy niedostępności endpointów
+- cache requestów
+- ochrona puli wątków aplikacji klienckich
+- monitorowanie
+- wykrywanie anomalii w systemie
+- real time dashboard: https://vimeo.com/33359539
+
 ## Demo
 
 ### basic-srv-a
@@ -260,3 +290,9 @@ _TODO_
 - https://cloud.spring.io/spring-cloud-zookeeper/
 - https://github.com/spring-cloud/spring-cloud-sleuth
 - http://ryanjbaxter.com/cloud/spring%20cloud/spring/2016/07/07/spring-cloud-sleuth.html
+- http://techblog.netflix.com/2013/06/announcing-zuul-edge-service-in-cloud.html
+- https://www.nginx.com/blog/introduction-to-microservices/?utm_source=service-discovery-in-a-microservices-architecture&utm_medium=blog
+- https://github.com/OpenFeign/feign
+- https://github.com/openzipkin/zipkin
+- http://martinfowler.com/bliki/CircuitBreaker.html
+- https://github.com/Netflix/Hystrix/wiki
