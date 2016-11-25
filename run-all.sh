@@ -14,12 +14,13 @@ HYSTRIX_PORT=9204
 
 function start {
  echo "Staring $1 (port=$2, instanceId=$3)..."
- nohup java -jar $1/target/$1-*-SNAPSHOT.jar \
+ nohup java -Xmx128m -Xss256k -jar $1/target/$1-*-SNAPSHOT.jar \
  	--server.port=$2 \
  	--spring.application.instance_id=$3 \
  	--discovery.server=http://localhost:$DISCOVERY_PORT/eureka \
  	--spring.sleuth.sampler.percentage=1 \
  	--turbine.stream.port=$TURBINE_PORT \
+ 	--config.repo.dir=`pwd`/configs \
  	&> logs/$1.$3.log&
  PID=`ps aux | grep $1 | grep $2 | head -n 1 | awk '{print $2}'`
  echo "...started with logs in logs/$1.log and PID: $PID"

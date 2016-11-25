@@ -29,7 +29,7 @@
 		<module>srv-gateway</module>
 		<module>srv-zipkin</module>
 		<module>srv-hystrix</module>
-		<module>srv-config-server</module>
+		<!--<module>srv-config-server</module>-->
 	</modules>
 
 	<properties>

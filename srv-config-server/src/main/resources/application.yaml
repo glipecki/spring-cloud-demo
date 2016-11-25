@@ -1,0 +1,9 @@
+server:
+  port: 9090
+spring:
+  cloud:
+    config:
+      enabled: false
+      server:
+        git:
+          uri: file://${config.repo.dir}/
