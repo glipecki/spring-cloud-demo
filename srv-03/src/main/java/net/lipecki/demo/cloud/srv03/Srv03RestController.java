@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 @RestController
 @Slf4j
-public class SampleRestController {
+public class Srv03RestController {
 
 	@RequestMapping("")
 	@HystrixCommand(fallbackMethod = "sampleFallback")

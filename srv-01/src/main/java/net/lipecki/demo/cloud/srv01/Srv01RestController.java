@@ -9,11 +9,11 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/")
 @RestController
 @Slf4j
-public class SampleRestController {
+public class Srv01RestController {
 
 	private final RestTemplate restTemplate;
 
-	public SampleRestController(final RestTemplate restTemplate) {
+	public Srv01RestController(final RestTemplate restTemplate) {
 		this.restTemplate = restTemplate;
 	}
 
