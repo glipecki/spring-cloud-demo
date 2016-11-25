@@ -251,8 +251,8 @@ Adres Hystrix dashboard (z turbine): http://localhost:9204/hystrix/monitor?strea
 _TODO_
 
 ## FAQ
-Adres konsoli RabbitMQ po uruchomieniu przez docker compose: http://localhost:15672/
-Testy ruchu do usług: $ ab -n 10000 http://localhost:9100/srv01/look-for-friends
+- Adres konsoli RabbitMQ po uruchomieniu przez docker compose: http://localhost:15672/
+- Testy ruchu do usług: $ ab -n 10000 http://localhost:9100/srv01/look-for-friends
 
 ## Materiały
 - http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html
