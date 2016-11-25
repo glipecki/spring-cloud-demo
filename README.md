@@ -33,7 +33,6 @@ Spring Cloud based microservices demo
   - cloud bus
   - cloud security
   - cloud oauth2
-  - cloud task
   - cloud aws 
 
 ## Teoria
